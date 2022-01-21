@@ -1,0 +1,19 @@
+.product-shelf {
+  border: 1px solid lightgray;
+  align-items: center;
+  width: 300px;
+  margin-bottom: 20px;
+  padding: 20px 0;
+}
+
+.shelf {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.product-image {
+  width: 150px;
+  height: 150px;
+  box-shadow: 2px 2px 5px #111111;
+}

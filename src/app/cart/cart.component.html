@@ -1,0 +1,38 @@
+<h3>Sacola de compras</h3>
+
+<!-- Surge se houver items no carrinho -->
+<ng-container *ngIf="items.length > 0">
+
+  <p>
+    <a [routerLink]="['/shipping']">Ver tabela de fretes</a>
+  </p>
+
+  <div class="cart-item" *ngFor="let item of items; let i = index">
+    <img class="productCartImage" src="{{item.imageURL}}">
+    <span>{{ item.name }}</span>
+    <span>R$ {{ item.price }}</span>
+    <button (click)="removeItem(i)">Remover item</button>
+  </div>
+
+  <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Nome</label>
+      <input id="name" type="text" formControlName="name">
+    </div>
+    <div>
+      <label for="address">Endereço</label>
+      <input id="address" type="text" formControlName="address">
+    </div>
+    <button class="button" type="submit">Comprar</button>
+  </form>
+
+</ng-container>
+
+<!-- Surge se não houver items no carrinho -->
+<ng-container *ngIf="items.length == 0">
+  <div>
+    <p>
+      Não existem itens no carrinho
+    </p>
+  </div>
+</ng-container>

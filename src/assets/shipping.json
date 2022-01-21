@@ -1,0 +1,14 @@
+[
+  {
+    "type": "Sedex Ultrarrápido",
+    "price": 25.99
+  },
+  {
+    "type": "Sedex Rápido",
+    "price": 9.99
+  },
+  {
+    "type": "Sedex Normal",
+    "price": 2.99
+  }
+]
