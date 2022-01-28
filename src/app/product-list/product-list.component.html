@@ -2,25 +2,36 @@
 
 <div class="product-shelf" *ngFor="let product of products">
   <div class="shelf">
-
+    <br>
     <a [routerLink]="['/products', product.id]">
       <img class="product-image" src="{{product.imageURL}}">
     </a>
-
     <h3>
       <a [title]="product.name + ' details'" [routerLink]="['/products', product.id]">
         {{product.name}}
       </a>
     </h3>
-
     <p *ngIf="product.description"> {{product.description}} </p>
-
     <button (click)="share()">Compartilhar</button>
-
-    <app-product-alerts
-    [product]="product"
-    (notify) ="onNotify()">
+    <app-product-alerts [product]="product" (notify)="onNotify()">
     </app-product-alerts>
-
   </div>
 </div>
+
+
+  <div class="product-shelf" *ngFor="let newProduct of newProducts">
+    <div class="shelf">
+      <a [routerLink]="['/products', newProduct.id]">
+        <img class="product-image" src="{{newProduct.imageURL}}">
+      </a>
+      <h3>
+        <a [title]="newProduct.name + ' details'" [routerLink]="['/products', newProduct.id]">
+          {{newProduct.name}}
+        </a>
+      </h3>
+      <p *ngIf="newProduct.description"> {{newProduct.description}} </p>
+      <button (click)="share()">Compartilhar</button>
+      <app-product-alerts [product]="newProduct" (notify)="onNotify()">
+      </app-product-alerts>
+    </div>
+  </div>

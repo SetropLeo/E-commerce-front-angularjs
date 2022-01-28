@@ -27,5 +27,5 @@ export const products = [
     price: 299,
     description: '',
     imageURL: 'assets/images/mouseHyperx.jpg'
-  }
+  },
 ];

@@ -1,0 +1,13 @@
+<h3>Cadastro de Produto</h3>
+
+<form #createproduct="ngForm">
+    <input type="text" name="productname" placeholder="Nome" ngModel>
+    <br />
+    <input type="text" name="productdescription" placeholder="Descrição" ngModel>
+    <br />
+    <input type="text" name="productprice" placeholder="Preço" ngModel>
+    <br />
+    <input type="text" name="producturl" placeholder="Imagem (URL)" ngModel>
+    <br />
+    <button class="button" type="button" (click)="createNewProduct(createproduct.value); createproduct.reset()">Criar</button>
+</form>

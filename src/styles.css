@@ -156,3 +156,11 @@ app-top-bar h1 {
   background-color: #EEEEEE;
   align-items: center;
 }
+
+/* Add Product Icon */ 
+.addProduct-icon {
+  width: 28px;
+  height: 24px;
+  padding-right: 4px;
+  filter: invert(30%) sepia(98%) saturate(1323%) hue-rotate(192deg) brightness(95%) contrast(86%);
+}
